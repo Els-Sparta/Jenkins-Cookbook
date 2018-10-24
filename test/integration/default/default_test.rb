@@ -10,7 +10,7 @@ describe package "openjdk-8-jdk" do
   its("version") { should match "8u181-b13-0ubuntu0.16.04.1" }
 end
 
-describe apt('https://pkg.jenkins.io/debian-stable') do
+describe apt("http://pkg.jenkins.io/debian-stable") do
   it { should exist }
   it { should be_enabled }
 end
