@@ -11,11 +11,11 @@ package "openjdk-8-jdk" do
   action :install
 end
 
-apt_update "update" do
-  action :update
+package "ruby-rails" do
+  action :install
 end
 
-package "ruby-full" do
+package "rails" do
   action :install
 end
 
