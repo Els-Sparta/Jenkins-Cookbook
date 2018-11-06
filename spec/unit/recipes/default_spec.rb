@@ -26,6 +26,10 @@ describe 'jenkins::default' do
       expect(chef_run).to install_package("openjdk-8-jdk")
     end
 
+    it 'should install ruby' do
+      expect(chef_run). to install_package('ruby-full')
+    end
+
     it 'should install jenkin' do
       expect(chef_run).to install_package("jenkins")
     end

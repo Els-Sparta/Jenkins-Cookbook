@@ -11,6 +11,14 @@ package "openjdk-8-jdk" do
   action :install
 end
 
+apt_update "update" do
+  action :update
+end
+
+package "ruby-full" do
+  action :install
+end
+
 apt_repository "add_jenkins" do
   key "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
   uri "http://pkg.jenkins.io/debian-stable"
